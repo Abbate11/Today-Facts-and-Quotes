@@ -2,6 +2,7 @@
 const quoteToday = document.getElementById("quoteSearch");
 
 
+
 const quote = quoteToday.value.trim()
 if (quote) {
     favQuotes();
