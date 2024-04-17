@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,56 +15,64 @@
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
 </head>
 
-<body>
-	<!-- Navigation bar -->
+	<body>
+		<!-- Nav bar -->
 
-	<div class="row">
-		<div class="col s12 box-outline">Navigation</div>
-	</div>
-
-	<!-- hero section -->
-	<div class="row">
-		<div class="col s12 box-outline">Hero Section</div>
-	</div>
-	<!-- page content -->
-	<div class="row">
-		<div class="col s3 box-outline">
-			<aside class="left">
-				<div class="favorites-container">
-					<div class="favorites-title">
-
+		<div class="row">
+				<nav id="nav-color" class="col s12 box-outline">
+					<div
+						class="nav-wrapper"
+						id="navbar">
+						<!-- <a
+							href="#"
+							class="brand-logo"
+							>Logo</a
+						> -->
+						<form id="searchbar">
+							<div class="input-field">
+								<input
+									id="search"
+									type="search"
+									required />
+								<label
+									class="label-icon"
+									for="search"
+									><i class="material-icons">search</i></label
+								>
+								<i class="material-icons">close</i>
+							</div>
+						</form>
+						<ul
+							id="nav-mobile"
+							class="right hide-on-med-and-down">
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="page1.html">Page1</a></li>
+							<li><a href="page2.html">Page2</a></li>
+						</ul>
 					</div>
-					<div class="favorites-list">
-
-					</div>
-				</div>
-			</aside>
+				</nav>
 		</div>
-		<div class="col s6 box-outline">
-			<div class="title-date-container">
-				<div class="title">
-					<h1>Today: Facts and Quotes</h1>
-				</div>
-				<div class="time">
-					<div class="js-date"></div>
-					<div class="js-time"></div>
-				</div>
-			</div>
-			<div class="quote">
 
-			</div>
+		<!-- hero section -->
+		<div class="row">
+			<div class="col s12 box-outline">Hero Section</div>
 		</div>
-		<div class="col s3 box-outline">
-			<section class="right">
-				<div class="on-this-day-container">
-					<div class="date">
-
+		<!-- page content -->
+		<div class="row">
+			<div class="col s3 box-outline">Left</div>
+			<div class="col s6 box-outline">
+				<div class="title-date-container">
+					<div class="title">
+						<h1>Today: Facts and Quotes</h1>
 					</div>
-					<div class="on-this-day-facts">
-						<a class="waves-effect waves-light btn-large" href="#"> Wave</a></aside>
+					<div class="time">
+						<div class="js-date"></div>
+						<div class="js-time"></div>
 					</div>
 				</div>
-			</section>
+				<div class="quote"></div>
+			</div>
+			<div class="col s3 box-outline">Right</div>
 		</div>
 	</div>
 	</div>
