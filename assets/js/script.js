@@ -7,7 +7,7 @@ const now = new Date();
 function updateTime() {
     const now = new Date()
     const currentDate = now.toLocaleDateString();//get current date
-    const currentTime = now.toLocaleTimeString();// get current tim e
+    const currentTime = now.toLocaleTimeString();// get current time
     document.querySelector('.js-time').textContent = currentTime; // concatenate date and time 
     document.querySelector('.js-date').textContent = currentDate;
 }

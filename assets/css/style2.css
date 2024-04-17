@@ -1,0 +1,165 @@
+body {
+    background-color: #446052 !important;
+    background: url(../Images/Lily\ pad.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 20%;
+    background-color: #446052;
+    font-family: 'Roboto Slab';
+}
+
+.favorites-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    width: 90%;
+    height: 80%;
+    background-color: purple;
+}
+
+.favorites-title {
+    display: flex;
+    justify-content: center;
+    background-color: orange;
+    width: 90%;
+    height: 10%;
+}
+
+.favorites-title p {
+    font-size: 2em;
+}
+
+.favorites-list {
+    display: flex;
+    background-color: orange;
+    width: 90%;
+    height: 80%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    width: 50%;
+    height: 90vh;
+    background-color: #446052;
+    font-family: 'Dancing Script';
+}
+
+.title-date-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: purple;
+}
+
+.title {
+    display: flex;
+    background-color: orange;
+    justify-content: center;
+}
+
+.date-time-container{
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    background-color: orange;
+}
+
+.time {
+    display: flex;
+    justify-content: center;
+    background-color: orange;
+}
+
+.quote {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 40%;
+    background-color: purple;
+    margin-bottom: 25em;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    height: 90vh;
+    width: 20%;
+    background-color: #446052;
+    font-family: 'Roboto Slab';
+}
+
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    width: 90%;
+    height: 20%;
+    background-color: purple;
+}
+
+.dropdown-1 {
+    display: flex;
+    width: 90%;
+    height: 40%;
+    background-color: orange;
+}
+
+.dropdown-2 {
+    display: flex;
+    width: 90%;
+    height: 40%;
+    background-color: orange;
+}
+
+.history-fact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+    width: 90%;
+    height: 70%;
+    background-color: purple;
+}
+
+.history-title {
+    display: flex;
+    height: 10%;
+    width: 90%;
+    background-color: orange;
+}
+
+.facts-container {
+    display: flex;
+    height: 80%;
+    width: 90%;
+    background-color: orange;
+}
+
+
