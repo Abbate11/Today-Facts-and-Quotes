@@ -16,7 +16,7 @@ setInterval(updateTime, 1000);
 
 // search historical facts
 const getHistoricalFact = async () => {
-    var text = 'marriage'
+    var text = 'Marriage'
    const url = 'https://api.api-ninjas.com/v1/historicalevents?text=' + text
    const response = await fetch(url, {
         method: 'GET',
@@ -32,7 +32,7 @@ getHistoricalFact();
 
 //quotes
 const getQuotes = async () => {
-    var category = 'marriage'
+    var category = 'cool'
     const url = 'https://api.api-ninjas.com/v1/quotes?category=' + category;
     const response = await fetch(url, {
         method: 'GET',
