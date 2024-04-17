@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -22,10 +24,41 @@
 	</head>
 
 	<body>
-		<!-- Navigation bar -->
+		<!-- Nav bar -->
 
 		<div class="row">
-			<div class="col s12 box-outline">Navigation</div>
+				<nav id="nav-color" class="col s12 box-outline">
+					<div
+						class="nav-wrapper"
+						id="navbar">
+						<!-- <a
+							href="#"
+							class="brand-logo"
+							>Logo</a
+						> -->
+						<form id="searchbar">
+							<div class="input-field">
+								<input
+									id="search"
+									type="search"
+									required />
+								<label
+									class="label-icon"
+									for="search"
+									><i class="material-icons">search</i></label
+								>
+								<i class="material-icons">close</i>
+							</div>
+						</form>
+						<ul
+							id="nav-mobile"
+							class="right hide-on-med-and-down">
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="page1.html">Page1</a></li>
+							<li><a href="page2.html">Page2</a></li>
+						</ul>
+					</div>
+				</nav>
 		</div>
 
 		<!-- hero section -->
@@ -35,19 +68,18 @@
 		<!-- page content -->
 		<div class="row">
 			<div class="col s3 box-outline">Left</div>
-			<div class="col s6 box-outline"> <div class="title-date-container">
-                <div class="title">
-                    <h1>Today: Facts and Quotes</h1>
-                </div>
-                <div class="time">
-                    <div class="js-date"></div>
-                    <div class="js-time"></div>
-                </div>
-            </div>
-            <div class="quote">
-    
-            </div>
-        </div>
+			<div class="col s6 box-outline">
+				<div class="title-date-container">
+					<div class="title">
+						<h1>Today: Facts and Quotes</h1>
+					</div>
+					<div class="time">
+						<div class="js-date"></div>
+						<div class="js-time"></div>
+					</div>
+				</div>
+				<div class="quote"></div>
+			</div>
 			<div class="col s3 box-outline">Right</div>
 		</div>
 		<div
