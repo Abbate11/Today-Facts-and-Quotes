@@ -43,6 +43,5 @@ const getQuotes = async () => {
     console.log('Data:', data);
 }
 
-getQuotes();
-
-
+    getQuotes();
+}
