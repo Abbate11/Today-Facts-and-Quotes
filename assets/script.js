@@ -7,7 +7,7 @@ const now = new Date();
 function updateTime() {
     const now = new Date()
     const currentDate = now.toLocaleDateString();//get current date
-    const currentTime = now.toLocaleTimeString();// get current time
+    const currentTime = now.toLocaleTimeString();// get current tim e
     document.getElementById('clock').textContent = currentDate + '' + currentTime; // concatenate date and time 
 }
 //calls the uptime function every second
@@ -44,4 +44,3 @@ const getQuotes = async () => {
 }
 
     getQuotes();
-}
