@@ -16,9 +16,7 @@ body {
 }
 
 .box-outline {
-    border-radius: 1em;
-    border: 1px solid rgb(175, 189, 138);
-    background-color: rgba(138, 150, 127, 0.2);
+    background-color: transparent;
 }
 
 #navbar {

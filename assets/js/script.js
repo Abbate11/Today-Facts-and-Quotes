@@ -28,7 +28,7 @@ const getHistoricalFact = async (keyword) => {
    document.getElementById("selected-option").innerHTML = `
         <div class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
+            <div class="card transparent darken-1">
                 <div class="card-content white-text">
                     <span class="card-title">${data[0].day}/${data[0].month}/${data[0].year}</span>
                     <p><b>Fact: </b> ${data[0].event}</p>
