@@ -1,10 +1,3 @@
-
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.dropdown-trigger');
-    var instances = M.Dropdown.init(elems, options);
-  });
-
-
 const quoteToday = document.getElementById("quoteSearch");
 // create a new Date object
 const now = new Date();
@@ -52,3 +45,27 @@ const getQuotes = async () => {
 
     getQuotes();
 
+    $(document).ready(function () {
+        $('.dropdown-trigger').dropdown();
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.dropdown-trigger');
+        var instances = M.Dropdown.init(elems);
+    
+        // Event listener for dropdown options
+        document.querySelectorAll('#dropdown1 a').forEach(function(element) {
+            element.onclick = function() {
+                // Get the value from data-value attribute of the clicked option
+                var value = this.getAttribute('data-value');
+                //pass this to the fetch
+                // call the getQuotes(value);
+                // call the getFacts(value);
+                // Append the selected option to the div
+                document.getElementById('selected-option').innerText = value;
+                
+                // Prevent the default action of anchor tag
+                return false;
+            };
+        });
+    });
