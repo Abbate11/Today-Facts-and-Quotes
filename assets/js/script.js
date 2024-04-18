@@ -1,7 +1,7 @@
 const quoteToday = document.getElementById("quoteSearch");
 // create a new Date object
 const now = new Date();
-
+let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 // Get the current data and time
 function updateTime() {
     const now = new Date()
@@ -16,16 +16,16 @@ setInterval(updateTime, 1000);
 // search historical facts
 const getHistoricalFact = async (keyword) => {
     // var text = 'Marriage'
-   const url = 'https://api.api-ninjas.com/v1/historicalevents?text=' + keyword;
-   const response = await fetch(url, {
+    const url = 'https://api.api-ninjas.com/v1/historicalevents?text=' + keyword;
+    const response = await fetch(url, {
         method: 'GET',
         headers: { 'X-Api-Key': 'rI6t0BiPfOwbkG2hOin0Rg==ygXGu6XjKHRRm1PR' },
         contentType: 'application/json'
-   });
+    });
 
-   const data = await response.json();
-   console.log('Facts:', data);
-   document.getElementById("selected-option").innerHTML = `
+    const data = await response.json();
+    console.log('Facts:', data);
+    document.getElementById("selected-option").innerHTML = `
         <div class="row">
         <div class="col s12 m6">
             <div class="card blue-grey darken-1">
@@ -36,17 +36,23 @@ const getHistoricalFact = async (keyword) => {
                     <p id='quote-content'></p>
                 </div>
                 <div class="card-action">
-                <a href="#">Favorite</a>
+                <a href="#" id="favorite">Favorite</a>
               </div>
             </div>
         </div>
         </div>`;
 
     getQuotes(keyword);
-   // TODO Append these values to this div with <p> <title> <cards></cards></title></p>
+    // TODO Append these values to this div with <p> <title> <cards></cards></title></p>
 }
 // getHistoricalFact();
 
+document.addEventListener("click", function (event) {
+    if (event.target.matches("#favorite")) {
+        console.log("favoriting", (document.getElementById("quote-content").textContent));
+        addToFavorites(document.getElementById("quote-content").textContent);
+    }
+})
 
 //quotes
 const getQuotes = async (keyword) => {
@@ -61,38 +67,81 @@ const getQuotes = async (keyword) => {
     const data = await response.json();
     console.log('Quotes:', data);
     const p = document.createElement("p");
-    p.innerHTML =`
+    p.innerHTML = `
     <b>Quote: </b>${data[0].quote}`;
     document.getElementById('quote-content').appendChild(p);
     // TODO Append these values to this div with <p> <title> <cards></cards></title></p>
 }
 
-    // getQuotes();
+// getQuotes();
 
-    $(document).ready(function () {
-        $('.dropdown-trigger').dropdown();
-    });
+$(document).ready(function () {
+    $('.dropdown-trigger').dropdown();
+});
 
-    document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.dropdown-trigger');
-        var instances = M.Dropdown.init(elems);
-    
-        // Event listener for dropdown options
-        document.querySelectorAll('#dropdown1 a').forEach(function(element) {
-            element.onclick = function() {
-                // Get the value from data-value attribute of the clicked option
-                var value = this.getAttribute('data-value');
-                console.log(value)
-                //pass this to the fetch
-                // call the getQuotes(value);
-                // getQuotes(value);
-                // call the getFacts(value);
-                getHistoricalFact(value);
-                // Append the selected option to the div
-                // document.getElementById('selected-option').innerText = value;
-                
-                // Prevent the default action of anchor tag
-                return false;
-            };
-        });
+document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems);
+
+    // Event listener for dropdown options
+    document.querySelectorAll('#dropdown1 a').forEach(function (element) {
+        element.onclick = function () {
+            // Get the value from data-value attribute of the clicked option
+            var value = this.getAttribute('data-value');
+            console.log(value)
+            //pass this to the fetch
+            // call the getQuotes(value);
+            // getQuotes(value);
+            // call the getFacts(value);
+            getHistoricalFact(value);
+            // Append the selected option to the div
+            // document.getElementById('selected-option').innerText = value;
+
+            // Prevent the default action of anchor tag
+            return false;
+        };
     });
+});
+
+//Function to add an item to favorites 
+function addToFavorites(item) {
+    //Retrieve existing favorites from local storage 
+    //Add each item to favorites if it's not already there
+    if (!favorites.includes(item)) {
+        favorites.push(item);
+    }
+    //save the updated favorites back to local storage
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+
+}
+
+//function to remove an item favorites
+function removeFromFavorites(item) {
+    //Retrieve existing favorites from local storage
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    //remove the item favorites
+    favorites = favorites.filter(fav => fav !== item);
+
+    //save the updated favorites back to local storage
+    localStorage.setItems('favorites', JSON.stringify(favorites));
+}
+
+//function to display favorites 
+function displayFavorites() {
+    // Retrieve favorites form local storage
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    //Display favorites in the UI 
+    const favoritesList = document.getElementById('favorites-list');
+    favoritesList.innerHTML = ''; //clear previous favorites
+
+    favorites.forEach(item => {
+        const listItem = document.createElement('li')
+        listItem.textContent = item;
+        favoritesList.appendChild(listItem);
+    });
+}
+
+// const selectedItems = ['Item 1', 'Item 2', 'Item 3'];
+// addToFavorites(selectedItems);
