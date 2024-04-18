@@ -103,5 +103,23 @@ li {
 }
 
 footer {
+    margin-top: 25em;
     text-align: center;
+}
+
+
+
+.js-time {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.js-date {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Dancing Script';
 }
