@@ -139,6 +139,10 @@ function displayFavorites() {
     favorites.forEach(item => {
         const listItem = document.createElement('li')
         listItem.textContent = item;
+        const deleteButn = document.createElement('button')
+        deleteButn.className = "btn";
+        deleteButn.textContent = "delete";
+        listItem.appendChild(deleteButn);
         favoritesList.appendChild(listItem);
     });
 }
