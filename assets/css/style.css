@@ -31,6 +31,14 @@ body {
     width: 100vw;
 }
 
+li {
+    color: white;
+}
+
+#dropdown1 {
+    background-color: #44605200;
+}
+
 .input-field > i{
     text-shadow: unset ;
 }
