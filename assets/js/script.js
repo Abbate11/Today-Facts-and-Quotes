@@ -35,6 +35,9 @@ const getHistoricalFact = async (keyword) => {
                     <hr>
                     <p id='quote-content'></p>
                 </div>
+                <div class="card-action">
+                <a href="#">Favorite</a>
+              </div>
             </div>
         </div>
         </div>`;
