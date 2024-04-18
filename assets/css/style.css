@@ -1,3 +1,42 @@
+:root {
+    --outer-space: #33393f;
+    --bright-turquoise: #2aefcb;
+    --gin: #e0eae4;
+    --heliotrope: #3d393a;
+}
+
+
+
+.header {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 10px;
+    flex: 0 0 400px;
+    background-color: #fefbd8;
+    padding: 40px;
+    text-align: center;
+    background: #a993ad;
+    color: #1b1717;
+}
+
+ h1 {
+    font-family: 'fairplay-display';
+    font-size: 42px;
+    line-height: normal;
+    margin: 1px;
+}
+
+ h2 {
+    font-family: 'dancing-script';
+    font-size: 30px;
+}
+
+p {
+    font-family: 'robato-slab';
+    font-size: 20px;
+
+}
 body {
     background-color: #446052 !important;
     background: url(../Images/lilyPad.webp);
@@ -5,35 +44,156 @@ body {
     background-size: cover;
 }
 
+section {
+    flex: 70%;
+    background-color: #989399;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    color: #1b1717;
+}
+
+.flex-container>div {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 10px;
+    flex-basis: 0 0 400px;
+}
+
+.card header {
+    padding: 20px;
+}
+
+.card p {
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+}
+
+.footer {
+    position: absolute;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    background: #343637;
+    color: #eae6e6;
+    opacity: 100%;
+}
+
+
 .pointer {
     cursor: pointer;
 }
 
 .box-outline {
-border: 1px solid rgb(239, 231, 231);
-background-color: rgba(155, 129, 175, 0.107);
+    border: 1px solid rgb(239, 231, 231);
+    background-color: rgba(140, 119, 157, 0.107);
 }
 
-#searchbar {
-width: 45%;
-margin-left: 20%;
-
-}
-
+/* navbar option */
 #navbar {
-        display: flex;
-        flex-wrap: nowrap;
-
-
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 #nav-color {
-background-color: transparent ;
-/* text-shadow: 1px 1px 2px rgb(23, 23, 23); */
-width: 100vw;
+    background-color: transparent ;
+    width: 100vw;
+}
+
+.input-field  i{
+    text-shadow: unset ;
+}
+
+
+.label {
+    cursor: pointer;
+    outline: none
+
+}
+/* fonts */
+/* // <uniquifier>: Use a unique and descriptive class name */
+/* // <weight>: Use a value from 400 to 900 */
+
+.playfair-display {
+    font-family: Playfair-Display;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+.dancing-script {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0%;
+}
+
+.card {
+    width: 325px;
+    background-blend-mode: darken;
+    border-radius: 15%;
+}
+.center {
+    border: 5px solid;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
 
 }
 
-.input-field > i{
-text-shadow: unset ;
+
+
+/* Tablets - header changes color */
+@media screen and (max-width: 992px) {
+    header {
+        background: #7f7c7f;
+    }
+}
+
+/* Large smartphones - navbar changes color */
+@media screen and (max-width: 768px) {
+    nav {
+        background-color: #8aa497;
+    }
+}
+
+/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 768px) {
+
+    .main,
+    nav {
+        flex-direction: column;
+        flex-flow: 0px;
+    }
 }
