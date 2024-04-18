@@ -136,14 +136,17 @@ function displayFavorites() {
     const favoritesList = document.getElementById('favorites-list');
     favoritesList.innerHTML = ''; //clear previous favorites
 
-    favorites.forEach(item => {
+    favorites.forEach(item => { 
+        const favCard = document.createElement('div')
+        favCard.className = "card";
         const listItem = document.createElement('li')
         listItem.textContent = item;
         const deleteButn = document.createElement('button')
         deleteButn.className = "btn";
         deleteButn.textContent = "delete";
         listItem.appendChild(deleteButn);
-        favoritesList.appendChild(listItem);
+        favCard.appendChild(listItem);
+        favoritesList.appendChild(favCard);
     });
 }
 
