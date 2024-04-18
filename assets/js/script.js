@@ -65,7 +65,7 @@ const getQuotes = async (keyword) => {
     });
     // set up the response body
     const data = await response.json();
-    console.log('Quotes:', data);
+    // console.log('Quotes:', data);
     const p = document.createElement("p");
     p.innerHTML = `
     <b>Quote: </b>${data[0].quote}`;
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
         element.onclick = function () {
             // Get the value from data-value attribute of the clicked option
             var value = this.getAttribute('data-value');
-            console.log(value)
+            // console.log(value)
             //pass this to the fetch
             // call the getQuotes(value);
             // getQuotes(value);
@@ -131,7 +131,7 @@ function removeFromFavorites(item) {
 function displayFavorites() {
     // Retrieve favorites form local storage
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-
+    console.log("favorites", favorites)
     //Display favorites in the UI 
     const favoritesList = document.getElementById('favorites-list');
     favoritesList.innerHTML = ''; //clear previous favorites
@@ -143,5 +143,6 @@ function displayFavorites() {
     });
 }
 
+displayFavorites()
 // const selectedItems = ['Item 1', 'Item 2', 'Item 3'];
 // addToFavorites(selectedItems);
