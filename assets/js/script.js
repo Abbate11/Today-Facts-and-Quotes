@@ -25,10 +25,20 @@ const getHistoricalFact = async (keyword) => {
 
    const data = await response.json();
    console.log('Facts:', data);
-   document.getElementById("selected-option").innerHTML = "";
-   const p = document.createElement("p");
-   p.textContent = data[0].event;
-   document.getElementById('selected-option').appendChild(p);
+   document.getElementById("selected-option").innerHTML = `
+        <div class="row">
+        <div class="col s12 m6">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">TODAY: </span>
+                    <p>Facts: ${data[0].event}</p>
+                    <p id="quote-content"></p>
+                </div>
+            </div>
+        </div>
+        </div>`;
+
+    getQuotes(keyword);
    // TODO Append these values to this div with <p> <title> <cards></cards></title></p>
 }
 // getHistoricalFact();
@@ -48,7 +58,7 @@ const getQuotes = async (keyword) => {
     console.log('Quotes:', data);
     const p = document.createElement("p");
     p.textContent = data[0].quote;
-    document.getElementById('selected-option').appendChild(p);
+    document.getElementById('quote-content').appendChild(p);
     // TODO Append these values to this div with <p> <title> <cards></cards></title></p>
 }
 
@@ -70,7 +80,7 @@ const getQuotes = async (keyword) => {
                 console.log(value)
                 //pass this to the fetch
                 // call the getQuotes(value);
-                getQuotes(value);
+                // getQuotes(value);
                 // call the getFacts(value);
                 getHistoricalFact(value);
                 // Append the selected option to the div
