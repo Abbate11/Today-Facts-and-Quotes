@@ -41,7 +41,7 @@ Consulted ChatGPT, W3schools.com, Zoom cloud recordings, MDN Web Docs, Materiali
 
 MIT License
 
-Copyright (c) 2024 Micah Read
+Copyright (c) 2024 Techstyle Factory
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
