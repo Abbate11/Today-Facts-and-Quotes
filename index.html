@@ -1,108 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0" />
-    <title>Today: Facts and Quotes</title>
-		<link
-			rel="stylesheet"
-			type="text/css"
-			href="./assets/css/style.css" />
-		<link
-			rel="stylesheet"
-			type="text/css"
-			href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
-			rel="stylesheet" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 
-		<link
-			rel="preconnect"
-			href="https://fonts.googleapis.com" />
-		<link
-			rel="preconnect"
-			href="https://fonts.gstatic.com"
-			crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap"
-			rel="stylesheet" />
-	</head>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+	<title>Today: Facts and Quotes</title>
+</head>
 	<body>
-		<!-- Dropdown Structure -->
-		<ul
-			id="dropdown1"
-			class="dropdown-content">
-			<li><a href="#!">one</a></li>
-			<li><a href="#!">two</a></li>
-			<li class="divider"></li>
-			<li><a href="#!">three</a></li>
-		</ul>
-		<nav>
-			<div class="nav-wrapper">
-				<ul class="right hide-on-med-and-down">
-					<li><a href="aboutus.html">About Us</a></li>
-					<li><a href="components.html">Components</a></li>
-				</ul>
-			</div>
-		</nav>
+		<div class="row">
+				<nav id="nav-color" class="col s12 box-outline">
+					<div
+						class="nav-wrapper"
+						id="navbar">
+						<ul id="nav-mobile" class="right hide-on-med-and-down">
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="page1.html">Page1</a></li>
+							<li><a href="page2.html">Page2</a></li>
+						</ul>
+					</div>
+				</nav>
+		</div>
+
 		<!-- hero section -->
 		<div class="row">
-			<div class="col s12 box-outline"></div>
-				<div style="text-align: center">
-		<h1 style="font-family: playfair-display;">Randomly Generated Quotes and Facts by Date</h1>
-		</div>
-			</div>
-			</div>
+			<div class="col s12 box-outline">Hero Section</div>
 		</div>
 		<!-- page content -->
-<main>
-
-		<div class="fixed row">
-			<div class="col s3 box-outline">Users can favorite?Quotes?</div>
-
-
+		<div class="row">
+			<div class="col s3 box-outline">
+				<aside class="left">
+					<div class="favorites-container">
+						<div class="favorites-title">
+							<p>Favorites</p>
+						</div>
+					<div class="favorites-list"></div>
+				</aside>
+			</div>
 			<div class="col s6 box-outline">
-				<div style="text-align:center"></div>
-									<div class="center">
-						<div class="js-date"></div>
-						<div class="js-time"></div>
 				<div class="title-date-container">
 					<div class="title">
-						<h2>Share Insight, dates, and quotes for a boost of inspiration</h2>
+						<h1>Today: Facts and Quotes</h1>
 					</div>
-
-					<div class="container">
-						<div class="card">
-							<h2><i class="fa fa-quote-left" aria-hidden="true"></i></h2>
-							<div class="content">Information of Quote Here</div>
-						</div>
-					</div>
-
+					<div class="time">
+						<div class="js-date"></div>
+						<div class="js-time"></div>
 					</div>
 				</div>
-				<div class="quote"></div>
 			</div>
-			<div class="col s3 box-outline"><p>calender?</p></div>
+			<div class="col s3 box-outline">
+				<a class='dropdown-trigger btn' href='#' data-target='dropdown1'>KEYWORD SELECTOR:</a>
+				<div id="dropdown1" class="row dropdown-content">
+					<div class="col s12 m4">
+					  <ul>
+						<li><a href="#!" data-value="age">Age</a></li>
+						<li><a href="#!" data-value="alone">Alone</a></li>
+						<li><a href="#!" data-value="amazing">Amazing</a></li>
+						<li><a href="#!" data-value="anger">Anger</a></li>
+						<li><a href="#!" data-value="architecture">Architecture</a></li>
+						<li><a href="#!" data-value="art">Art</a></li>
+						<li><a href="#!" data-value="attitude">Attitude</a></li>
+						<li><a href="#!" data-value="beauty">Beauty</a></li>
+						<li><a href="#!" data-value="best">Best</a></li>
+						<li><a href="#!" data-value="birthday">Birthday</a></li>
+						<li><a href="#!" data-value="business">Business</a></li>
+						<li><a href="#!" data-value="car">Car</a></li>
+						<li><a href="#!" data-value="change">Change</a></li>
+						<li><a href="#!" data-value="communication">Communication</a></li>
+						<li><a href="#!" data-value="computers">Computers</a></li>
+						<li><a href="#!" data-value="cool">Cool</a></li>
+						<li><a href="#!" data-value="courage">Courage</a></li>
+						<li><a href="#!" data-value="dad">Dad</a></li>
+						<li><a href="#!" data-value="dating">Dating</a></li>
+						<li><a href="#!" data-value="death">Death</a></li>
+						<li><a href="#!" data-value="design">Design</a></li>
+						<li><a href="#!" data-value="dreams">Dreams</a></li>
+						<li><a href="#!" data-value="education">Education</a></li>
+						<li><a href="#!" data-value="environmental">Environmental</a></li>
+						<li><a href="#!" data-value="equality">Equality</a></li>
+						<li><a href="#!" data-value="experience">Experience</a></li>
+						<li><a href="#!" data-value="failure">Failure</a></li>
+						<li><a href="#!" data-value="faith">Faith</a></li>
+						<li><a href="#!" data-value="family">Family</a></li>
+						<li><a href="#!" data-value="famous">Famous</a></li>
+						<li><a href="#!" data-value="fear">Fear</a></li>
+						<li><a href="#!" data-value="fitness">Fitness</a></li>
+						<li><a href="#!" data-value="food">Food</a></li>
+						<li><a href="#!" data-value="forgiveness">Forgiveness</a></li>
+						<li><a href="#!" data-value="freedom">Freedom</a></li>
+						<li><a href="#!" data-value="friendship">Friendship</a></li>
+						<li><a href="#!" data-value="funny">Funny</a></li>
+						<li><a href="#!" data-value="future">Future</a></li>
+						<li><a href="#!" data-value="god">God</a></li>
+						<li><a href="#!" data-value="good">Good</a></li>
+						<li><a href="#!" data-value="government">Government</a></li>
+						<li><a href="#!" data-value="graduation">Graduation</a></li>
+						<li><a href="#!" data-value="great">Great</a></li>
+						<li><a href="#!" data-value="happiness">Happiness</a></li>
+						<li><a href="#!" data-value="health">Health</a></li>
+						<li><a href="#!" data-value="history">History</a></li>
+						<li><a href="#!" data-value="home">Home</a></li>
+						<li><a href="#!" data-value="hope">Hope</a></li>
+						<li><a href="#!" data-value="humor">Humor</a></li>
+						<li><a href="#!" data-value="imagination">Imagination</a></li>
+						<li><a href="#!" data-value="inspirational">Inspirational</a></li>
+						<li><a href="#!" data-value="intelligence">Intelligence</a></li>
+						<li><a href="#!" data-value="jealousy">Jealousy</a></li>
+						<li><a href="#!" data-value="knowledge">Knowledge</a></li>
+						<li><a href="#!" data-value="leadership">Leadership</a></li>
+						<li><a href="#!" data-value="learning">Learning</a></li>
+						<li><a href="#!" data-value="legal">Legal</a></li>
+						<li><a href="#!" data-value="life">Life</a></li>
+						<li><a href="#!" data-value="love">Love</a></li>
+						<li><a href="#!" data-value="marriage">Marriage</a></li>
+						<li><a href="#!" data-value="medical">Medical</a></li>
+						<li><a href="#!" data-value="men">Men</a></li>
+						<li><a href="#!" data-value="mom">Mom</a></li>
+						<li><a href="#!" data-value="money">Money</a></li>
+						<li><a href="#!" data-value="morning">Morning</a></li>
+						<li><a href="#!" data-value="movies">Movies</a></li>
+						<li><a href="#!" data-value="success">Success</a></li>
+						<li><a href="#!" data-value="home">Home</a></li>
+					  </ul>
+					</div>
+				  </div>
+				</div>
+			</div>
 		</div>
+	</div>
+	</div>
+	<div class="container dark" id="border">
+		<header>
+			<h1></h1>
+		</header>
+		<div id="main">
+			<section class="row toggle"></section>
+			<section class="form"></section>
+		</div>
+		<footer class="copystamp">
+			<h6>Christian, Keegan, Micah, Lora</h6>
+			<p>&copy; 2024 Techstyle Factory</p>
+		</footer>
+	</div>
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="./assets/js/script.js"></script>
+</body>
 
-	</main>
-			<footer class="copystamp">
-				<h6>Christian, Keegan, Micah, Lora</h6>
-				<p>&copy; 2024 Techstyle Factory</p>
-			</footer>
-		</div>
-		<!-- Compiled and minified JavaScript -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-		<script src="./assets/js/script.js"></script>
-		<script type="text/javascript">
-			var addthis_config = { data_track_addressbar: true };
-		</script>
-		<script
-			type="text/javascript"
-			src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ff17589278d8b3a"></script>
-	</body>
 </html>
-
