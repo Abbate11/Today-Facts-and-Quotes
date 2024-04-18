@@ -30,9 +30,10 @@ const getHistoricalFact = async (keyword) => {
         <div class="col s12 m6">
             <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
-                    <span class="card-title">TODAY: </span>
-                    <p>Facts: ${data[0].event}</p>
-                    <p id="quote-content"></p>
+                    <span class="card-title">${data[0].day}/${data[0].month}/${data[0].year}</span>
+                    <p><b>Fact: </b> ${data[0].event}</p>
+                    <hr>
+                    <p id='quote-content'></p>
                 </div>
             </div>
         </div>
@@ -57,7 +58,8 @@ const getQuotes = async (keyword) => {
     const data = await response.json();
     console.log('Quotes:', data);
     const p = document.createElement("p");
-    p.textContent = data[0].quote;
+    p.innerHTML =`
+    <b>Quote: </b>${data[0].quote}`;
     document.getElementById('quote-content').appendChild(p);
     // TODO Append these values to this div with <p> <title> <cards></cards></title></p>
 }
