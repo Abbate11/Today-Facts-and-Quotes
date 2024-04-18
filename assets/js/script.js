@@ -1,4 +1,4 @@
-// the api key 
+// the api key
 const quoteToday = document.getElementById("quoteSearch");
 // create a new Date object
 const now = new Date();
@@ -8,7 +8,7 @@ function updateTime() {
     const now = new Date()
     const currentDate = now.toLocaleDateString();//get current date
     const currentTime = now.toLocaleTimeString();// get current tim e
-    document.querySelector('.js-time').textContent = currentTime; // concatenate date and time 
+    document.querySelector('.js-time').textContent = currentTime; // concatenate date and time
     document.querySelector('.js-date').textContent = currentDate;
 }
 //calls the uptime function every second
@@ -45,3 +45,6 @@ const getQuotes = async () => {
 }
 
     getQuotes();
+
+//--drop down box--// or //--popup--//
+
