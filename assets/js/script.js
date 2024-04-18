@@ -1,4 +1,5 @@
 const quoteToday = document.getElementById("quoteSearch");
+const deleteBtn = document.querySelector(".btn");
 // create a new Date object
 const now = new Date();
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -121,11 +122,13 @@ function removeFromFavorites(item) {
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
     //remove the item favorites
-    favorites = favorites.filter(fav => fav !== item);
+    favorites.filter(fav => fav !== item);
 
     //save the updated favorites back to local storage
-    localStorage.setItems('favorites', JSON.stringify(favorites));
+    localStorage.setItem('favorites', JSON.stringify(favorites));
 }
+
+deleteBtn.addEventListener('click', removeFromFavorites);
 
 //function to display favorites 
 function displayFavorites() {
