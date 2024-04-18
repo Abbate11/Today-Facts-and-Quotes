@@ -14,9 +14,9 @@ function updateTime() {
 setInterval(updateTime, 1000);
 
 // search historical facts
-const getHistoricalFact = async () => {
-    var text = 'Marriage'
-   const url = 'https://api.api-ninjas.com/v1/historicalevents?text=' + text
+const getHistoricalFact = async (keyword) => {
+    // var text = 'Marriage'
+   const url = 'https://api.api-ninjas.com/v1/historicalevents?text=' + keyword;
    const response = await fetch(url, {
         method: 'GET',
         headers: { 'X-Api-Key': 'rI6t0BiPfOwbkG2hOin0Rg==ygXGu6XjKHRRm1PR' },
@@ -25,14 +25,19 @@ const getHistoricalFact = async () => {
 
    const data = await response.json();
    console.log('Facts:', data);
+   document.getElementById("selected-option").innerHTML = "";
+   const p = document.createElement("p");
+   p.textContent = data[0].event;
+   document.getElementById('selected-option').appendChild(p);
+   // TODO Append these values to this div with <p> <title> <cards></cards></title></p>
 }
-getHistoricalFact();
+// getHistoricalFact();
 
 
 //quotes
-const getQuotes = async () => {
-    var category = 'cool'
-    const url = 'https://api.api-ninjas.com/v1/quotes?category=' + category;
+const getQuotes = async (keyword) => {
+    // var category = 'cool'
+    const url = 'https://api.api-ninjas.com/v1/quotes?category=' + keyword;
     const response = await fetch(url, {
         method: 'GET',
         headers: { 'X-Api-Key': 'rI6t0BiPfOwbkG2hOin0Rg==ygXGu6XjKHRRm1PR' },
@@ -40,10 +45,14 @@ const getQuotes = async () => {
     });
     // set up the response body
     const data = await response.json();
-    console.log('Data:', data);
+    console.log('Quotes:', data);
+    const p = document.createElement("p");
+    p.textContent = data[0].quote;
+    document.getElementById('selected-option').appendChild(p);
+    // TODO Append these values to this div with <p> <title> <cards></cards></title></p>
 }
 
-    getQuotes();
+    // getQuotes();
 
     $(document).ready(function () {
         $('.dropdown-trigger').dropdown();
@@ -58,11 +67,14 @@ const getQuotes = async () => {
             element.onclick = function() {
                 // Get the value from data-value attribute of the clicked option
                 var value = this.getAttribute('data-value');
+                console.log(value)
                 //pass this to the fetch
                 // call the getQuotes(value);
+                getQuotes(value);
                 // call the getFacts(value);
+                getHistoricalFact(value);
                 // Append the selected option to the div
-                document.getElementById('selected-option').innerText = value;
+                // document.getElementById('selected-option').innerText = value;
                 
                 // Prevent the default action of anchor tag
                 return false;
