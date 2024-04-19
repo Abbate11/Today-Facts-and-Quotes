@@ -113,19 +113,11 @@ function addToFavorites(item) {
     }
     //save the updated favorites back to local storage
     localStorage.setItem('favorites', JSON.stringify(favorites));
-
 }
 
 //function to remove an item favorites
-function removeFromFavorites(item) {
-    //Retrieve existing favorites from local storage
-    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-
-    //remove the item favorites
-    favorites.filter(fav => fav !== item);
-
-    //save the updated favorites back to local storage
-    localStorage.setItem('favorites', JSON.stringify(favorites));
+function removeFromFavorites() {
+    
 }
 
 deleteBtn.addEventListener('click', removeFromFavorites);

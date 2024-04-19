@@ -36,7 +36,7 @@ li {
 }
 
 #dropdown1 {
-    background-color: #44605200;
+    backdrop-filter: blur(10px);
 }
 
 .input-field > i{
