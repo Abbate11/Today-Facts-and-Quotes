@@ -30,7 +30,7 @@ Code written in HTML5, CSS, and JavaScript using Materialize and two separate AP
 
 https://Abbate11.github.io/Today-Facts-and-Quotes/
 
-![Screenshot of final page](./assets/images/Screenshot.png)
+![Screenshot of final page](./assets/Images/Screenshot.png)
 
 ## Credits
 
